@@ -1,0 +1,113 @@
+/* .add-btn {
+  text-align: right;
+} */
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-color: azure !important;
+}
+
+.mt{
+  margin-top: 8rem;
+}
+
+.nav-header{
+  margin-bottom: 5rem !important;
+}
+
+
+.navbar-brand{
+  font-weight: bold;
+  font-size: 2rem !important;
+  text-transform: uppercase;
+}
+
+.logout{
+  margin: 5px 10px 5px 0;
+}
+
+.login-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  flex-direction: column;
+  background-color: bisque;
+  margin-top: 3.5rem;
+  text-align: center;
+}
+
+.login-header h3{
+  font-weight: 400;
+  width: 50%;
+  padding: 20px 0;
+
+}
+
+.login-header button{
+  text-transform: lowercase;
+}
+
+.nav-link{
+  font-size: 1.4rem !important;
+}
+
+.nav-link:hover{
+  color: orangered !important;
+}
+
+/* .active{
+  color: orangered !important;
+} */
+
+
+.footer{
+  background-color: grey;
+  color: white;
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.footer-container{
+  /* margin: 0 50px; */
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.footer-container h3{
+  text-transform: uppercase;
+}
+
+.footer .footer-icons{
+  font-size: 2rem;
+}
+
+.footer .footer-icons i{
+  margin: 0 20px;
+}
+
+.footer .footer-icons i:hover{
+  cursor: pointer;
+}
+
+.fa-facebook:hover{
+  color: blue;
+}
+
+.fa-instagram:hover{
+  color: rgb(230, 35, 74);
+}
+
+.fa-twitter:hover{
+  color: rgb(52, 239, 52);
+}
+
+.fa-google-plus-g:hover{
+  color: orangered;
+}
