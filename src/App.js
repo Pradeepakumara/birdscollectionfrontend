@@ -9,7 +9,6 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Edit from './components/Edit';
 import Details from './components/Details';
 import Main from './components/Main';
-import { useState } from 'react';
 import Login from './components/Login';
 import { useSelector } from 'react-redux';
 import Footer from './components/Footer';

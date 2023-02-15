@@ -32,7 +32,7 @@ const Navbar = () => {
                                 
                             </ul>
                             
-                            <a className='btn btn-warning logout' href="">Log out</a>
+                            {/* <a className='btn btn-warning logout' href="#">Log out</a> */}
                             <form className="d-flex" role="search">
                                
                     
