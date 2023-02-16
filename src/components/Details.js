@@ -28,29 +28,32 @@ const Details = () => {
     console.log(getpostdata)
 
 
-    const getIndividualpost = async () => {
-
-        const res = await fetch(`${BASE_URL}/getpost/${id}`, {
-            method: "GET",
-            headers:{
-                "Content-Type":"application/json"
-            }
-        });
-
-        const data = await res.json();
-        console.log(data);
-
-        if(res.status === 422 || !data){
-            console.log("error")
-        }
-        else{
-            setPostdata(data)
-            console.log("get data")
-            setN(data.name);
-        }
-    }
+    
 
     useEffect(() => {
+
+        const getIndividualpost = async () => {
+
+            const res = await fetch(`${BASE_URL}/getpost/${id}`, {
+                method: "GET",
+                headers:{
+                    "Content-Type":"application/json"
+                }
+            });
+    
+            const data = await res.json();
+            console.log(data);
+    
+            if(res.status === 422 || !data){
+                console.log("error")
+            }
+            else{
+                setPostdata(data)
+                console.log("get data")
+                setN(data.name);
+            }
+        }
+
         getIndividualpost()
     }, [id])
     
