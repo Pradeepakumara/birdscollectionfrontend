@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { BASE_URL } from '../api/api';
+import Header from './Header';
 import MainPosts from './MainPosts';
 
 const Main = () => {
 
     const [postData, setPostData] = useState([]);
-    console.log(postData);
+    // console.log(postData);
 
     
 
@@ -21,7 +22,7 @@ const Main = () => {
             });
     
             const data = await res.json();
-            console.log(data);
+            // console.log(data);
     
             if(res.status === 422 || !data){
                 console.log("error")
@@ -37,13 +38,17 @@ const Main = () => {
 
 
   return (
+    <>
+    <Header />
     <div className='container mt-3'>
+        
         <div className="row">
         {
             postData.map(post => <MainPosts key={post._id} post={post} />)
         }
         </div>
     </div>
+    </>
   )
 }
 

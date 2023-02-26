@@ -9,33 +9,59 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Edit from './components/Edit';
 import Details from './components/Details';
 import Main from './components/Main';
-import Login from './components/Login';
-import { useSelector } from 'react-redux';
+// import Login from './components/Login';
+// import { useSelector } from 'react-redux';
 import Footer from './components/Footer';
+// import { useEffect, useState } from 'react';
 
 
 function App() {
 
-  const user = useSelector(state => state.user);
-  console.log(user)
+  // const [usn, setUsn] = useState("");
+  // const user = useSelector(state => state.user);
+  // console.log(user)
+  
+  // useEffect(() => {
+  //   if(user){
+  //     setUsn(user.displayName);
+      
+  //     // setUsn(localStorage.getItem("name"))
+  //   }
+  //   else{
+  //     console.log(user);
+  //   }
+  // }, [user])
+
+  // localStorage.setItem("name", usn);
+
+  // setUsn(localStorage.getItem("name"))
+
+  // console.log(usn);
+  
+
+  // useEffect(() => {
+  //   if(user){
+  //     setUsn(localStorage.getItem("name"))
+  //   }
+  // }, [])
 
   return (
     <div className="App">
       {
-        !user ? <Login /> : (
+        // !user ? <Login /> : (
           <Router>
-            <Navbar />
+            <Navbar/>
             <Switch>
-              <Route exact path="/" component={Home} />
+              <Route exact path="/crud" component={Home} />
               <Route path='/register' component={Register} />
               <Route path='/edit/:id' component={Edit} />
               <Route path='/view/:id' component={Details} />
-              <Route path='/birds' component={Main} />
+              <Route path='/' component={Main} />
 
             </Switch>
             <Footer />
           </Router>
-        )
+        // )
       }
 
     </div>

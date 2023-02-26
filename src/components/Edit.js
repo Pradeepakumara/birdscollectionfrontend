@@ -5,7 +5,9 @@ import { BASE_URL } from '../api/api';
 const Edit = () => {
     
     const {id} = useParams();
-    console.log(id)
+
+    // const history = useHistory()
+    // console.log(id)
 
     // const [getpostdata, setPostdata] = useState([]);
     // console.log(getpostdata)
@@ -20,7 +22,7 @@ const Edit = () => {
 
 
     const setData = (e) => {
-        console.log(e.target.value);
+        // console.log(e.target.value);
         const { name, value } = e.target;
         setINP((preval) => {
             return {
@@ -33,28 +35,34 @@ const Edit = () => {
     
 
 
-    const getIndividualpost = async () => {
-
-        const res = await fetch(`${BASE_URL}/getpost/${id}`, {
-            method: "GET",
-            headers:{
-                "Content-Type":"application/json"
-            }
-        });
-
-        const data = await res.json();
-        console.log(data);
-
-        if(res.status === 422 || !data){
-            console.log("error")
-        }
-        else{
-            setINP(data)
-            console.log("get data")
-        }
-    }
+    
 
     useEffect(() => {
+
+        
+
+        const getIndividualpost = async () => {
+
+            const res = await fetch(`${BASE_URL}/getpost/${id}`, {
+                method: "GET",
+                headers:{
+                    "Content-Type":"application/json"
+                }
+            });
+    
+            const data = await res.json();
+            // console.log(data);
+    
+            if(res.status === 422 || !data){
+                console.log("error")
+            }
+            else{
+                setINP(data)
+                console.log("get data")
+                // history.push("/");
+            }
+        }
+        
         getIndividualpost()
     }, [id])
 
@@ -74,7 +82,7 @@ const Edit = () => {
         });
 
         const data2 = await res2.json()
-        console.log(data2)
+        // console.log(data2)
 
         if(res2.status === 422 || !data2){
             alert("Fill the data")

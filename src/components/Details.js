@@ -19,13 +19,13 @@ import { BASE_URL } from '../api/api';
 const Details = () => {
 
     const {id} = useParams();
-    console.log(id)
+    // console.log(id)
     
     const history = useHistory();
 
     const [n, setN] = useState('')
     const [getpostdata, setPostdata] = useState([]);
-    console.log(getpostdata)
+    // console.log(getpostdata)
 
 
     
@@ -42,7 +42,7 @@ const Details = () => {
             });
     
             const data = await res.json();
-            console.log(data);
+            // console.log(data);
     
             if(res.status === 422 || !data){
                 console.log("error")

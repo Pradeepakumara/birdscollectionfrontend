@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Avatar from '@mui/material/Avatar';
-import {useSelector} from 'react-redux';
+// import {useSelector} from 'react-redux';
+import Profile from '../assets/profile.JPG';
 
 
 const Navbar = () => {
 
-    const user = useSelector(state => state.user);
+    // const user = useSelector(state => state.user);
     return (
         <>
             <header className='nav-header'>
@@ -24,7 +25,7 @@ const Navbar = () => {
                                 <Link to="/" className="nav-link" aria-current="page">Home</Link>
                                 </li>
                                 <li className="nav-item">
-                                <Link to="/birds" className="nav-link" aria-current="page">View</Link>
+                                <Link to="/crud" className="nav-link" aria-current="page">CRUD</Link>
                                 </li>
                                 <li className="nav-item">
                                 <Link to="/register" className="nav-link" aria-current="page">Add</Link>
@@ -36,7 +37,9 @@ const Navbar = () => {
                             <form className="d-flex" role="search">
                                
                     
-                            <Avatar alt="Remy Sharp" src={user?.photoURL} />
+                            <a href="https://personalpradeepprofile.netlify.app/">
+                            <Avatar alt="Remy Sharp" src={Profile} />
+                            </a>
                             </form>
                         </div>
                     </div>

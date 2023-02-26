@@ -25,6 +25,34 @@ body{
   text-transform: uppercase;
 }
 
+/* Header */
+
+.header-top{
+  /* padding: 50px; */
+  background-color: white;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+
+.header-contain-box{
+  margin: 50px;
+  padding: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+
+.header-text h1{
+  color: orangered;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+}
+
+
 .logout{
   margin: 5px 10px 5px 0;
 }
@@ -52,7 +80,9 @@ body{
 }
 
 .nav-link{
-  font-size: 1.4rem !important;
+  font-size: 1.3rem !important;
+  font-weight: bold !important;
+  text-transform: uppercase;
 }
 
 .nav-link:hover{
