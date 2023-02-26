@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import { BASE_URL } from '../api/api';
 
 const Edit = () => {
     
     const {id} = useParams();
 
-    // const history = useHistory()
+    const history = useHistory()
     // console.log(id)
 
     // const [getpostdata, setPostdata] = useState([]);
@@ -59,7 +59,7 @@ const Edit = () => {
             else{
                 setINP(data)
                 console.log("get data")
-                // history.push("/");
+                history.push("/");
             }
         }
         
