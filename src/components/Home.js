@@ -61,7 +61,7 @@ const Home = () => {
         <div className='mt'>
             <div className="container">
                 <div className="add-btn mt-2 mb-4">
-                    <Link to='/register' className='d-grid gap-2 col-6 mx-auto'>
+                    <Link to='/add' className='d-grid gap-2 col-6 mx-auto'>
                     <button className='btn btn-primary'>Add Birds Data</button>
                     </Link>
                 </div>
