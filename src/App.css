@@ -100,6 +100,7 @@ body{
   font-size: 1.3rem;
   text-align: center;
   padding: 10px 0;
+  /* width: 100%; */
 }
 
 .footer-container{
@@ -108,6 +109,7 @@ body{
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: baseline;
+  /* width: 100%; */
 }
 
 .footer-container h3{
@@ -141,3 +143,15 @@ body{
 .fa-google-plus-g:hover{
   color: orangered;
 }
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+  .display-none-mb{
+    display: none;
+  }
+}
+

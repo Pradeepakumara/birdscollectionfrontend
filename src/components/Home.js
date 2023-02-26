@@ -73,7 +73,7 @@ const Home = () => {
                             <th scope="col">Name</th>
                             <th scope="col">Date</th>
                             {/* <th scope="col">Image Url</th> */}
-                            <th scope="col">Title</th>
+                            <th scope="col" className='display-none-mb'>Title</th>
                             {/* <th scope="col">Description</th> */}
                             <th scope="col">Actions</th>
                         </tr>
@@ -88,7 +88,7 @@ const Home = () => {
                             <td>{item.name}</td>
                             <td>{item.date}</td>
                             {/* <td>{item.image}</td> */}
-                            <td>{item.title}</td>
+                            <td className='display-none-mb'>{item.title}</td>
                             {/* <td>{item.description}</td> */}
                             <td className='d-flex justify-content-between'>
                                 <Link to={`/view/${item._id}`}>
