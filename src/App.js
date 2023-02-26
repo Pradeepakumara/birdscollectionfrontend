@@ -52,12 +52,11 @@ function App() {
           <Router>
             <Navbar/>
             <Switch>
-            <Route path='/' component={Main} />
               <Route exact path="/crud" component={Home} />
               <Route path='/register' component={Register} />
               <Route path='/edit/:id' component={Edit} />
               <Route path='/view/:id' component={Details} />
-              
+              <Route path='/' component={Main} />
 
             </Switch>
             <Footer />
