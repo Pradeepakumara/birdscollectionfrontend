@@ -53,10 +53,10 @@ function App() {
             <Navbar/>
             <Switch>
               <Route exact path="/crud" component={Home} />
-              <Route path='/add' component={Register} />
-              <Route path='/edit/:id' component={Edit} />
-              <Route path='/view/:id' component={Details} />
-              <Route path='/' component={Main} />
+              <Route exact path='/add' component={Register} />
+              <Route exact path='/edit/:id' component={Edit} />
+              <Route exact path='/view/:id' component={Details} />
+              <Route exact path='/' component={Main} />
 
             </Switch>
             <Footer />
