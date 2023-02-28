@@ -52,8 +52,8 @@ function App() {
           <Router>
             <Navbar/>
             <Switch>
-              {/* <Route path="/crud" component={Home} /> */}
-              <Route path="/crud" element={<Home />} />
+              <Route path="/crud" component={Home} />
+              <Route path="/crud" component={Home} />
               <Route path='/add' component={Register} />
               <Route path='/edit/:id' component={Edit} />
               <Route path='/view/:id' component={Details} />
